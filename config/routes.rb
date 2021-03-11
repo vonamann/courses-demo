@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get '/api/users/:user_id'                    => 'api/users#courses'
+  get '/api/users/:user_id/courses/:course_id' => 'api/users#lessons'
 end
