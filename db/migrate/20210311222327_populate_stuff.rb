@@ -18,7 +18,7 @@ class PopulateStuff < ActiveRecord::Migration[6.1]
     Lesson.create(id: 6, course_id: 2, title: 'Modules',      content: 'Python. Nulla gravida metus in tortor commodo, quis auctor velit euismod. Proin sit amet neque accumsan urna feugiat fringilla. Mauris luctus eu neque sed hendrerit.')
 
     # Populating promo-codes
-    PromoCode.create!(id: 1, code: 'FOOBAR', course_id: 2, lesson_limit: 2, duration: 30)
+    PromoCode.create!(id: 1, code: 'FOOBAR', course_id: 2, lesson_limit: 2, duration: 10)
 
     # Populating purchases
     Purchase.create!(id: 1, user_id: 1, course_id: 1)
