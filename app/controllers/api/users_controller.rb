@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
 
   def lessons
     course = Course.find_by(id: params[:course_id])
-    render json: { error_message: "Course ##{params[:course_id]} not found" } and return if course.nil?
+    render json: { error_message: "Course ##{params[:course_id]} not found" }, status: 404 and return if course.nil?
     render json: @user.available_lessons_obj(course)
   end
 end
