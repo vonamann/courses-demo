@@ -1,24 +1,40 @@
-# README
+# Courses demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Get the code
 
-Things you may want to cover:
+```
+$ git clone git@github.com:vonamann/courses-demo.git
+```
 
-* Ruby version
+### Install required gems
 
-* System dependencies
+```
+$ bundle install
+```
 
-* Configuration
+### Run migrations
 
-* Database creation
+```
+$ bin/rails db:migrate
+```
 
-* Database initialization
+This will create all required tables and also populate them with some test data
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### Run the webserver
 
-* Deployment instructions
+```
+$ bin/rails s --port=3000
+```
 
-* ...
+### Test the API
+
+Open in your favorite web browser some URLs
+
+```
+http://localhost:3000/api/users/1
+http://localhost:3000/api/users/1/courses/1
+http://localhost:3000/api/users/1/courses/2
+http://localhost:3000/api/users/1/courses/101 # NOT FOUND
+http://localhost:3000/api/users/100           # NOT FOUND
+```
